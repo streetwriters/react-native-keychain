@@ -567,6 +567,9 @@ public class KeychainModule extends ReactContextBaseJavaModule {
       String promptInfoNegativeButton = promptInfoOptionsMap.getString(AuthPromptOptions.CANCEL);
       promptInfoBuilder.setNegativeButtonText(promptInfoNegativeButton);
     }
+    // Provide Passcode Fallback
+    promptInfoBuilder.setDeviceCredentialAllowed(true);
+    
     final PromptInfo promptInfo = promptInfoBuilder.build();
 
     return promptInfo;
